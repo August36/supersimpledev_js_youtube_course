@@ -35,18 +35,42 @@
           stars: 4.5,
           count: 87,
         },
-        //function inside an object is called Method
+
         fun: function function1() {
           console.log("function inside object");
         },
       };
 
+      //function inside an object is called Method
+      //console.log() - console is an object and log() is a function inside the console object, and therefor a method.
+      // Math.random() is another example of a method
+      //console.log and Math.random is built-in objects - which means they are provided by the programming language
+      // JSON is also a built-in object
+      // JSON = JavaScript Object Notation, its a syntax, it similiar to javascript objects but has less features
+      //this is the product2 object in JSON format:
+      //       {
+      //     "name": "shirt",
+      //     "delivery-time": "1 day",
+      //     "rating": {
+      //         "stars": 4.5,
+      //         "count": 87
+      //     },
+      //     "fun": "function inside object"
+      // }
+      // one difference is that all properties and string most use double quotes
+      // Also JSON does not use functions
+      // so why use JSON?
+      // because almost every programming language understands JSON, it is more universal
+
       console.log(product2);
       console.log(product2.name);
       console.log(product2["name"]);
       console.log(product2["delivery-time"]);
+
       console.log(product2.rating.count);
       product2.fun();
+
+      console.log(typeof console.log);
     </script>
   </body>
 </html>
