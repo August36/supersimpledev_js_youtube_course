@@ -20,11 +20,18 @@
       console.log(convertToCelsius(87));
 
       function convertTemperature(degrees, unit) {
-        convertToCelsius(87, "C");
-        convertToFahrenheit(65, "F");
-        return degrees + " Degrees in " + unit;
+        if (unit === "C") {
+          convertToFahrenheit(degrees);
+          let result = convertToFahrenheit(degrees);
+          return `${result} Degrees in F`;
+        } else {
+          convertToCelsius(degrees);
+          let result = convertToCelsius(degrees);
+          return `${result} Degrees in C`;
+        }
       }
-      console.log(convertTemperature);
+      console.log(convertTemperature(43, "C"));
+      console.log(convertTemperature(35, "F"));
     </script>
   </body>
 </html>
